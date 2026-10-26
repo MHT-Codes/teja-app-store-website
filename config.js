@@ -6,5 +6,5 @@ window.STORE_CONFIG = {
     projectId: "teja-app-store",
     appId: "1:358541495094:web:10f28ddd7af3b59bcbc197"
   },
-  api: "https://teja-app-store-api.pappurimhteja.workers.dev/"
+  api: "https://teja-app-store-api.pappurimhteja.workers.dev"
 };
