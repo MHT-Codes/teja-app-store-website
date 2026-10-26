@@ -1,0 +1,1 @@
+{"name":"teja-store-worker","private":true,"type":"module","scripts":{"deploy":"wrangler deploy"},"dependencies":{},"devDependencies":{"wrangler":"^4.0.0"}}
