@@ -3,24 +3,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Teja App Store — Android Apps</title>
 
   <meta name="description"
-        content="Discover and install Android apps from Teja App Store. No login required.">
+        content="Discover and download Android apps from Teja App Store. No login required.">
 
   <!-- Browser tab icon -->
-  <link rel="icon"
-        type="image/png"
-        href="/teja-favicon.png">
+  <link rel="icon" type="image/png" href="/teja-favicon.png">
 
-  <!-- Website stylesheet -->
+  <!-- Existing stylesheet -->
   <link rel="stylesheet" href="/style.css">
 
-  <!-- Logo styling -->
   <style>
     .brand {
       display: inline-flex;
@@ -43,6 +38,15 @@
       letter-spacing: -0.5px;
     }
 
+    .store-banner {
+      display: block;
+      width: 100%;
+      max-width: 680px;
+      height: auto;
+      margin: 0 auto 24px;
+      border-radius: 18px;
+    }
+
     @media (max-width: 600px) {
       .brand-logo {
         width: 42px;
@@ -62,12 +66,12 @@
 
 <body>
 
-  <!-- Header -->
+  <!-- Website header -->
   <header>
     <a class="brand" href="/">
       <img
         src="/teja-favicon.png"
-        alt="Teja App Store Logo"
+        alt="Teja App Store icon"
         class="brand-logo"
       >
       <span class="brand-name">Teja App Store</span>
@@ -78,23 +82,15 @@
     </span>
   </header>
 
-  <!-- Main content -->
+  <!-- Main website content -->
   <main class="wrap">
 
-    <!-- Hero section -->
+    <!-- Banner -->
     <section class="hero">
-
       <img
         src="/teja-logo.png"
-        alt="Teja App Store"
-        style="
-          display:block;
-          width:100%;
-          max-width:480px;
-          height:auto;
-          margin:0 auto 24px;
-          border-radius:18px;
-        "
+        alt="Teja App Store — Discover, Download, Grow"
+        class="store-banner"
       >
 
       <h1>Discover great Android apps</h1>
@@ -103,12 +99,10 @@
         Browse, explore and install APKs directly.
         No account required.
       </p>
-
     </section>
 
-    <!-- Search and category filter -->
+    <!-- Search and category filters -->
     <div class="toolbar">
-
       <input
         id="search"
         type="search"
@@ -122,10 +116,9 @@
       >
         <option value="">All categories</option>
       </select>
-
     </div>
 
-    <!-- App listings -->
+    <!-- Dynamic app listings -->
     <div id="apps" class="grid">
       <p>Loading apps...</p>
     </div>
@@ -137,10 +130,10 @@
     Teja App Store · Download APKs responsibly
   </footer>
 
-  <!-- Existing website configuration -->
+  <!-- Firebase and backend configuration -->
   <script src="/config.js"></script>
 
-  <!-- Existing app listing functionality -->
+  <!-- App listings, search and downloads -->
   <script type="module" src="/public.js"></script>
 
 </body>
