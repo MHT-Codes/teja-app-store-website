@@ -1,1 +1,147 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Teja App Store — Android Apps</title><meta name="description" content="Discover and install Android apps from Teja App Store. No login required."><link rel="stylesheet" href="/style.css"></head><body><header><a class="brand" href="/">✦ Teja App Store</a><span class="muted">Android apps • No sign-in</span></header><main class="wrap"><section class="hero"><h1>Discover great Android apps</h1><p>Browse, explore and install APKs directly. No account required.</p></section><div class="toolbar"><input id="search" type="search" placeholder="Search apps..."><select id="category"><option value="">All categories</option></select></div><div id="apps" class="grid"><p>Loading apps...</p></div></main><footer>Teja App Store · Download APKs responsibly</footer><script src="/config.js"></script><script type="module" src="/public.js"></script></body></html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>Teja App Store — Android Apps</title>
+
+  <meta name="description"
+        content="Discover and install Android apps from Teja App Store. No login required.">
+
+  <!-- Browser tab icon -->
+  <link rel="icon"
+        type="image/png"
+        href="/teja-favicon.png">
+
+  <!-- Website stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Logo styling -->
+  <style>
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    @media (max-width: 600px) {
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand-name {
+        font-size: 17px;
+      }
+
+      header .muted {
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <a class="brand" href="/">
+      <img
+        src="/teja-favicon.png"
+        alt="Teja App Store Logo"
+        class="brand-logo"
+      >
+      <span class="brand-name">Teja App Store</span>
+    </a>
+
+    <span class="muted">
+      Android apps • No sign-in
+    </span>
+  </header>
+
+  <!-- Main content -->
+  <main class="wrap">
+
+    <!-- Hero section -->
+    <section class="hero">
+
+      <img
+        src="/teja-logo.png"
+        alt="Teja App Store"
+        style="
+          display:block;
+          width:100%;
+          max-width:480px;
+          height:auto;
+          margin:0 auto 24px;
+          border-radius:18px;
+        "
+      >
+
+      <h1>Discover great Android apps</h1>
+
+      <p>
+        Browse, explore and install APKs directly.
+        No account required.
+      </p>
+
+    </section>
+
+    <!-- Search and category filter -->
+    <div class="toolbar">
+
+      <input
+        id="search"
+        type="search"
+        placeholder="Search apps..."
+        aria-label="Search apps"
+      >
+
+      <select
+        id="category"
+        aria-label="Filter by category"
+      >
+        <option value="">All categories</option>
+      </select>
+
+    </div>
+
+    <!-- App listings -->
+    <div id="apps" class="grid">
+      <p>Loading apps...</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Teja App Store · Download APKs responsibly
+  </footer>
+
+  <!-- Existing website configuration -->
+  <script src="/config.js"></script>
+
+  <!-- Existing app listing functionality -->
+  <script type="module" src="/public.js"></script>
+
+</body>
+</html>
