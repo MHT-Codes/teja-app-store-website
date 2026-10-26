@@ -1,56 +1,149 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Teja App Store — Android Apps</title>
-
-  <meta name="description"
-        content="Discover and download Android apps from Teja App Store. No login required.">
+  <title>Teja App Store | Discover Android Apps</title>
+  <meta name="description" content="Discover and download Android apps from Teja App Store.">
 
   <!-- Browser tab icon -->
-  <link rel="icon" type="image/png" href="/teja-favicon.png">
+  <link rel="icon" type="image/png" href="/teja-favicon.png?v=3">
+  <link rel="shortcut icon" href="/teja-favicon.png?v=3">
+  <link rel="apple-touch-icon" href="/teja-favicon.png">
 
-  <!-- Existing stylesheet -->
+  <!-- Original website styles -->
   <link rel="stylesheet" href="/style.css">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9ff;
+      color: #182449;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e8ecf5;
+      padding: 16px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
     .brand {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 12px;
       text-decoration: none;
+      color: #1746a2;
     }
 
     .brand-logo {
-      width: 56px;
-      height: 56px;
+      width: 52px;
+      height: 52px;
       object-fit: contain;
       border-radius: 12px;
-      flex-shrink: 0;
     }
 
     .brand-name {
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      color: #1746a2;
+    }
+
+    .muted {
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    main.wrap {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #1254cb, #6335dd);
+      color: white;
+      padding: 32px;
+      border-radius: 24px;
+      text-align: center;
+      margin-bottom: 25px;
     }
 
     .store-banner {
       display: block;
       width: 100%;
-      max-width: 680px;
+      max-width: 620px;
       height: auto;
       margin: 0 auto 24px;
       border-radius: 18px;
     }
 
+    .hero h1 {
+      font-size: clamp(25px, 4vw, 40px);
+      margin: 10px 0;
+    }
+
+    .hero p {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar input,
+    .toolbar select {
+      padding: 14px;
+      border: 1px solid #dce3ef;
+      border-radius: 12px;
+      background: white;
+      font-size: 15px;
+    }
+
+    .toolbar input {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .toolbar select {
+      min-width: 160px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #64748b;
+      font-size: 13px;
+    }
+
     @media (max-width: 600px) {
+      header {
+        padding: 12px 16px;
+      }
+
       .brand-logo {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
       }
 
       .brand-name {
@@ -58,7 +151,20 @@
       }
 
       header .muted {
-        font-size: 11px;
+        display: none;
+      }
+
+      .hero {
+        padding: 22px 15px;
+      }
+
+      .toolbar {
+        flex-direction: column;
+      }
+
+      .toolbar input,
+      .toolbar select {
+        width: 100%;
       }
     }
   </style>
@@ -66,74 +172,64 @@
 
 <body>
 
-  <!-- Website header -->
+  <!-- Header -->
   <header>
     <a class="brand" href="/">
       <img
         src="/teja-favicon.png"
-        alt="Teja App Store icon"
+        alt="Teja App Store"
         class="brand-logo"
       >
       <span class="brand-name">Teja App Store</span>
     </a>
 
-    <span class="muted">
-      Android apps • No sign-in
-    </span>
+    <span class="muted">Android Apps • No Sign-in Required</span>
   </header>
 
-  <!-- Main website content -->
+  <!-- Homepage -->
   <main class="wrap">
 
-    <!-- Banner -->
     <section class="hero">
       <img
         src="/teja-logo.png"
-        alt="Teja App Store — Discover, Download, Grow"
+        alt="Teja App Store Banner"
         class="store-banner"
       >
 
-      <h1>Discover great Android apps</h1>
-
+      <h1>Discover Great Android Apps</h1>
       <p>
-        Browse, explore and install APKs directly.
-        No account required.
+        Explore, download and install useful Android
+        applications. No account required.
       </p>
     </section>
 
-    <!-- Search and category filters -->
+    <!-- App search -->
     <div class="toolbar">
       <input
-        id="search"
         type="search"
+        id="search"
         placeholder="Search apps..."
         aria-label="Search apps"
       >
 
-      <select
-        id="category"
-        aria-label="Filter by category"
-      >
-        <option value="">All categories</option>
+      <select id="category" aria-label="App category">
+        <option value="">All Categories</option>
       </select>
     </div>
 
-    <!-- Dynamic app listings -->
+    <!-- Apps loaded by public.js -->
     <div id="apps" class="grid">
       <p>Loading apps...</p>
     </div>
 
   </main>
 
-  <!-- Footer -->
   <footer>
-    Teja App Store · Download APKs responsibly
+    © 2026 Teja App Store. All rights reserved.
   </footer>
 
-  <!-- Firebase and backend configuration -->
+  <!-- Existing backend connection -->
   <script src="/config.js"></script>
-
-  <!-- App listings, search and downloads -->
   <script type="module" src="/public.js"></script>
 
 </body>
