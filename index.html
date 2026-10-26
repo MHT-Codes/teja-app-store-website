@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Teja App Store | Discover Android Apps</title>
-  <meta name="description" content="Discover and download Android apps from Teja App Store.">
 
-  <!-- Browser tab icon -->
-  <link rel="icon" type="image/png" href="/teja-favicon.png?v=3">
-  <link rel="shortcut icon" href="/teja-favicon.png?v=3">
-  <link rel="apple-touch-icon" href="/teja-favicon.png">
+  <meta name="description"
+        content="Discover and download Android apps from Teja App Store. No sign-in required.">
 
-  <!-- Original website styles -->
+  <!-- Browser tab icon: use confirmed working image -->
+  <link rel="icon" type="image/png" href="/teja-logo.png?v=7">
+  <link rel="shortcut icon" type="image/png" href="/teja-logo.png?v=7">
+  <link rel="apple-touch-icon" href="/teja-logo.png?v=7">
+
+  <!-- Existing website CSS -->
   <link rel="stylesheet" href="/style.css">
 
   <style>
@@ -23,86 +25,97 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f7f9ff;
-      color: #182449;
+      color: #172554;
     }
 
     header {
-      background: white;
-      border-bottom: 1px solid #e8ecf5;
-      padding: 16px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
+      padding: 16px 5%;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
-      color: #1746a2;
+      min-width: 0;
     }
 
     .brand-logo {
-      width: 52px;
-      height: 52px;
+      width: 76px;
+      height: 58px;
       object-fit: contain;
-      border-radius: 12px;
+      border-radius: 10px;
+      flex-shrink: 0;
     }
 
     .brand-name {
-      font-size: 23px;
+      font-size: 24px;
       font-weight: 800;
       color: #1746a2;
+      letter-spacing: -0.5px;
     }
 
-    .muted {
-      color: #64748b;
+    header .muted {
       font-size: 13px;
+      color: #64748b;
     }
 
     main.wrap {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px;
+      width: min(1100px, 94%);
+      margin: 0 auto;
+      padding: 30px 0;
     }
 
     .hero {
-      background: linear-gradient(120deg, #1254cb, #6335dd);
+      background: linear-gradient(
+        120deg,
+        #1254cb,
+        #5634d9
+      );
       color: white;
-      padding: 32px;
       border-radius: 24px;
+      padding: 30px 24px;
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 26px;
+      overflow: hidden;
     }
 
     .store-banner {
       display: block;
       width: 100%;
-      max-width: 620px;
+      max-width: 550px;
       height: auto;
       margin: 0 auto 24px;
       border-radius: 18px;
+      background: white;
     }
 
     .hero h1 {
-      font-size: clamp(25px, 4vw, 40px);
-      margin: 10px 0;
+      font-size: clamp(26px, 4vw, 40px);
+      margin: 12px 0;
+      color: white;
     }
 
     .hero p {
-      opacity: 0.9;
+      font-size: 16px;
       line-height: 1.6;
+      color: #eef2ff;
+      margin: 0;
     }
 
     .toolbar {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
       margin-bottom: 25px;
-      flex-wrap: wrap;
     }
 
     .toolbar input,
@@ -112,6 +125,7 @@
       border-radius: 12px;
       background: white;
       font-size: 15px;
+      color: #172554;
     }
 
     .toolbar input {
@@ -125,15 +139,16 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns:
+        repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
     }
 
     footer {
       text-align: center;
-      padding: 30px 15px;
-      color: #64748b;
+      padding: 28px 16px;
       font-size: 13px;
+      color: #64748b;
     }
 
     @media (max-width: 600px) {
@@ -141,21 +156,30 @@
         padding: 12px 16px;
       }
 
+      .brand {
+        gap: 8px;
+      }
+
       .brand-logo {
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 44px;
       }
 
       .brand-name {
-        font-size: 17px;
+        font-size: 18px;
       }
 
       header .muted {
         display: none;
       }
 
+      main.wrap {
+        width: 94%;
+        padding-top: 20px;
+      }
+
       .hero {
-        padding: 22px 15px;
+        padding: 20px 14px;
       }
 
       .toolbar {
@@ -172,63 +196,86 @@
 
 <body>
 
-  <!-- Header -->
+  <!-- Website header -->
   <header>
     <a class="brand" href="/">
+
+      <!-- Use the image that works on Cloudflare -->
       <img
-        src="/teja-favicon.png?v=5"
-        alt="Teja App Store"
+        src="/teja-logo.png?v=7"
+        alt=""
         class="brand-logo"
+        width="76"
+        height="58"
       >
-      <span class="brand-name">Teja App Store</span>
+
+      <span class="brand-name">
+        Teja App Store
+      </span>
+
     </a>
 
-    <span class="muted">Android Apps • No Sign-in Required</span>
+    <span class="muted">
+      Android Apps • No Sign-in Required
+    </span>
   </header>
 
-  <!-- Homepage -->
+  <!-- Main content -->
   <main class="wrap">
 
+    <!-- Homepage banner -->
     <section class="hero">
+
       <img
-        src="/teja-logo.png?v=5"
+        src="/teja-logo.png?v=7"
         alt="Teja App Store Banner"
         class="store-banner"
       >
 
       <h1>Discover Great Android Apps</h1>
+
       <p>
         Explore, download and install useful Android
         applications. No account required.
       </p>
+
     </section>
 
-    <!-- App search -->
+    <!-- Search and filter -->
     <div class="toolbar">
+
       <input
-        type="search"
         id="search"
+        type="search"
         placeholder="Search apps..."
         aria-label="Search apps"
       >
 
-      <select id="category" aria-label="App category">
-        <option value="">All Categories</option>
+      <select
+        id="category"
+        aria-label="Filter by category"
+      >
+        <option value="">
+          All categories
+        </option>
       </select>
+
     </div>
 
-    <!-- Apps loaded by public.js -->
+    <!-- Existing dynamic app listings -->
     <div id="apps" class="grid">
       <p>Loading apps...</p>
     </div>
 
   </main>
 
+  <!-- Footer -->
   <footer>
-    © 2026 Teja App Store. All rights reserved.
+    © 2026 Teja App Store.
+    Download APKs responsibly.
   </footer>
 
-  <!-- Existing backend connection -->
+  <!-- Keep these existing files connected -->
   <script src="/config.js"></script>
   <script type="module" src="/public.js"></script>
 
