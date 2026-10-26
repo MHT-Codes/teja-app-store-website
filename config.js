@@ -1,10 +1,10 @@
 // Firebase web app configuration is public. NEVER put GitHub tokens or service-account keys here.
 window.STORE_CONFIG = {
   firebase: {
-    apiKey: "REPLACE_FIREBASE_WEB_API_KEY",
-    authDomain: "REPLACE_PROJECT_ID.firebaseapp.com",
-    projectId: "REPLACE_PROJECT_ID",
-    appId: "REPLACE_FIREBASE_WEB_APP_ID"
+    apiKey: "AIzaSyAWulecd9zT1A6_J1IA4j0XoEuER62trX4",
+    authDomain: "teja-app-store.firebaseapp.com",
+    projectId: "teja-app-store",
+    appId: "1:358541495094:web:10f28ddd7af3b59bcbc197"
   },
   api: "https://REPLACE_WORKER.workers.dev"
 };
